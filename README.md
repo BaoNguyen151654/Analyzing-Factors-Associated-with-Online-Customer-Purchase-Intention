@@ -1,1 +1,2 @@
-# Analyzing-Factors-Associated-with-Online-Customer-Purchase-Intention
+# Regression Analysis: Analyzing Factors Associated with Online Customer Purchase Intention
+
