@@ -2,7 +2,9 @@
 ---
 
 ## 1/ Project Overview ##
-**Goal:** In this project, I analyze the factors associated with online customer purchase intention using a logistic regression model. Understanding these factors helps businesses make effective marketing decisions and focus their efforts on customers who are more likely to make a purchase.
+**Goal:** In this project, I analyze the factors associated with online customer purchase intention. Understanding these factors helps businesses make effective marketing decisions and focus their efforts on customers who are more likely to make a purchase.
+
+**Method:** After verifying that all logistic regression assumptions are satisfied, the coefficient can be interpreted as the change in the log-odds of the outcome associated with a one-unit increase in the predictor, holding all other variables constant
 
 **Metadata:** The dataset contains 12,330 sessions, where **Revenue** indicates whether an online visit results in a purchase or not.
 
