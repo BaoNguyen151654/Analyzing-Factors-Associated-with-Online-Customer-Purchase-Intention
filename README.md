@@ -61,3 +61,16 @@
 </p>
 
 The Target feature **Revenue** is a binary feature with 2 values: **Yes** and **No**, where **Yes** means the session resulted in a purchase and **No** means the session has no purchase. **=> Assumption 1 is satisfied**
+
+### Assumption 2: The observations are independent ###
+
+According to the dataset information from the UCI Machine Learning Repository, the dataset was constructed so that each session belongs to a different user within a one-year period. This design prevents any bias toward a specific campaign, special day, user profile, or time period. ([SOURCE](https://archive.ics.uci.edu/dataset/468/online+shoppers+purchasing+intention+dataset)) **=> Assumption 2 is sastified**
+
+
+
+
+
+
+
+
+
