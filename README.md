@@ -238,7 +238,7 @@ All features had **a p values greater than 0.05** after the second **Box tidwell
 **=> Assumption 5 is satisfied** 
 
 ### Assumption 6: The Sample Size is Sufficiently Large ###
-
+I used the rule of thumb to calculate the minimum required sample size for the model. The formula is as follows:
 <p align="center">
   <img src="Images/SampleCheck.png" alt="Flowchart" width="400">
 </p>
