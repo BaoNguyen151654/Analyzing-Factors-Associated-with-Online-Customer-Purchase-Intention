@@ -227,7 +227,7 @@ I used the **Box-Tidwell test** to check whether there is a linear relationship 
 
 **P value > 0.05** means there is a linear relationship **=>** *Administrative_Duration_log, Administrative_log, Informational_log, Informational_Duration_log,  ProductRelated_log* are not linear.
 
-Features with **p-values greater than 0.05** were retained to satisfy Assumption 5.
+**Refinement:** Features with **p-values greater than 0.05** were retained to satisfy Assumption 5.
 
 <p align="center">
   <img src="Images/Box-tidwell-test-2.png" alt="Flowchart" width="700">
