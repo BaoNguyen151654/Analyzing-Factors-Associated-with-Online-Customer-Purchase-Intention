@@ -160,8 +160,84 @@ After that, I used the Pearson correlation again to check for correlations. This
   </tr>
 </table>
 
+**=> Assumption 3 is satisfied**
 
-**=>> Assumption 3 is sastified**
+### Assumption 4: There are No Extreme Outliers ###
+
+Values below the first quartile or above the third quartile were treated as outliers.
+
+<table align="center">
+  <tr>
+    <th>Feature</th>
+    <th>Total Outliers</th>
+  </tr>
+  <tr>
+    <td align="center">BounceRates</td>
+    <td align="center">1551</td>
+  </tr>
+  <tr>
+    <td align="center">ExitRates</td>
+    <td align="center">1099</td>
+  </tr>
+  <tr>
+    <td align="center">PageValues</td>
+    <td align="center">2730</td>
+  </tr>
+  <tr>
+    <td align="center">SpecialDay</td>
+    <td align="center">1251</td>
+  </tr>
+  <tr>
+    <td align="center">Administrative</td>
+    <td align="center">404</td>
+  </tr>
+  <tr>
+    <td align="center">Administrative_Duration</td>
+    <td align="center">1172</td>
+  </tr>
+  <tr>
+    <td align="center">Informational</td>
+    <td align="center">2631</td>
+  </tr>
+  <tr>
+    <td align="center">Informational_Duration</td>
+    <td align="center">2405</td>
+  </tr>
+  <tr>
+    <td align="center">ProductRelated</td>
+    <td align="center">987</td>
+  </tr>
+  <tr>
+    <td align="center">ProductRelated_Duration</td>
+    <td align="center">961</td>
+  </tr>
+</table>
+
+**Refinement:** These outlier values were all removed. One drawback of this approach is that the variables *PageValues* and *SpecialDay* became unusable, as they contained only zeros after filtering. Therefore, both variables were also dropped from the dataset.
+
+**=> Assumption 4 is satisfied**
+
+### Assumption 5: There is a Linear Relationship Between Explanatory Variables and the Logit of the Response ###
+
+I used the **Box-Tidwell test** to check whether there is a linear relationship between the independent features and the log-odds of the target variable.
+
+<p align="center">
+  <img src="Images/Box-tidwell-test.png" alt="Flowchart" width="700">
+</p
+
+**P value > 0.05** means there is a linear relationship **=>** *Administrative_Duration_log, Administrative_log, Informational_log, Informational_Duration_log,  ProductRelated_log* are not linear.
+
+Features with **p-values greater than 0.05** were retained to satisfy Assumption 5.
+
+<p align="center">
+  <img src="Images/Box-tidwell-test-2.png" alt="Flowchart" width="700">
+</p
+
+All features had **a p values greater than 0.05** after the second **Box tidwell test** 
+
+**=> Assumption 5 is satisfied** 
+
+### Assumption 6: The Sample Size is Sufficiently Large ###
 
 
 
