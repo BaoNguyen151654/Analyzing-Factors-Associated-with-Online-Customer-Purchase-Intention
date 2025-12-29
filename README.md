@@ -54,7 +54,7 @@
 
 **Interpretation of coefficients:** Model coefficients and p-values are interpretable once all assumptions are satisfied.
 
-## 3/ Assumption Check ##
+## 3/ Assumption Check and Refinement ##
 ### Assumption 1: The response variable is binary ###
 <p align="center">
   <img src="Images/Target.png" alt="Flowchart" width="200">
@@ -66,11 +66,102 @@ The Target feature **Revenue** is a binary feature with 2 values: **Yes** and **
 
 According to the dataset information from the UCI Machine Learning Repository, the dataset was constructed so that each session belongs to a different user within a one-year period. This design prevents any bias toward a specific campaign, special day, user profile, or time period. ([SOURCE](https://archive.ics.uci.edu/dataset/468/online+shoppers+purchasing+intention+dataset)) **=> Assumption 2 is sastified**
 
+### Assumption 3: There is No Multicollinearity Among Explanatory Variables ###
+
+To check for multicollinearity among independent features, I examined the correlation matrix and calculated the Variance Inflation Factor (VIF) for each feature.
+<p align="center">
+  <img src="Images/Correlation.png" alt="Flowchart" width="500">
+</p>
+
+According to the Pearson correlation, *BounceRates* and *ExitRates* are highly correlated **(0.91)**, and *ProductRelated* and *ProductRelated_Duration* also show a strong correlation **(0.86)**.
+
+<table align="center">
+  <tr>
+    <th>Feature</th>
+    <th>VIF</th>
+  </tr>
+  <tr>
+    <td align="center">ProductRelated</td>
+    <td align="center">4.430363</td>
+  </tr>
+  <tr>
+    <td align="center">ProductRelated_Duration</td>
+    <td align="center">4.330691</td>
+  </tr>
+  <tr>
+    <td align="center">BounceRates</td>
+    <td align="center">6.410740</td>
+  </tr>
+  <tr>
+    <td align="center">ExitRates</td>
+    <td align="center">7.151757</td>
+  </tr>
+</table>
+
+Besides Pearson correlation, the Variance Inflation Factor (VIF) test is also a useful method to detect multicollinearity. As expected, the features *ProductRelated*, *ProductRelated_Duration*, *BounceRates*, and *ExitRates* exhibit relatively high VIF scores, ranging from **4.4** to **7.1**.
+
+**=> These four features should be preprocessed to satisfy Assumption 3.**
+
+**Refinement:** 
+
+While both *BounceRates* and *ExitRates* are related to how customers leave a page and are measured on the same scale (0–1), I created a new feature called *EngagementIndex*. This feature reflects the level of user engagement, with higher values indicating that users are more likely to stay and interact with the page. It can be calculated using the following formula:
+<p align="center">
+  <img src="Images/EngamentIndex.png" alt="Flowchart" width="500">
+</p>
+
+For *ProductRelated* and *ProductRelated_Duration*, I could not merge these two features because they are not measured on the same scale. Therefore, I removed one of them; in this case, *ProductRelated* was removed because it had a higher **VIF score (4.4 > 4.3)**.
+
+After that, I used the Pearson correlation again to check for correlations. This time, none of the independent features had **a correlation higher than 0.7**. I also performed the VIF test again, and none of the features had **a VIF score higher than 1**.
+
+<table align="center">
+  <tr>
+    <th>Variable</th>
+    <th>VIF</th>
+  </tr>
+  <tr>
+    <td align="center">ProductRelated_Duration</td>
+    <td align="center">1.081645</td>
+  </tr>
+  <tr>
+    <td align="center">Month</td>
+    <td align="center">1.016627</td>
+  </tr>
+  <tr>
+    <td align="center">OperatingSystems</td>
+    <td align="center">1.158841</td>
+  </tr>
+  <tr>
+    <td align="center">Browser</td>
+    <td align="center">1.148238</td>
+  </tr>
+  <tr>
+    <td align="center">Region</td>
+    <td align="center">1.022907</td>
+  </tr>
+  <tr>
+    <td align="center">TrafficType</td>
+    <td align="center">1.077766</td>
+  </tr>
+  <tr>
+    <td align="center">Weekend</td>
+    <td align="center">1.007259</td>
+  </tr>
+  <tr>
+    <td align="center">VisitorType_Other</td>
+    <td align="center">1.300107</td>
+  </tr>
+  <tr>
+    <td align="center">VisitorType_Returning_Visitor</td>
+    <td align="center">1.167817</td>
+  </tr>
+  <tr>
+    <td align="center">EngagementIndex</td>
+    <td align="center">1.149975</td>
+  </tr>
+</table>
 
 
-
-
-
+**=>> Assumption 3 is sastified**
 
 
 
