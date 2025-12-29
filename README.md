@@ -239,5 +239,19 @@ All features had **a p values greater than 0.05** after the second **Box tidwell
 
 ### Assumption 6: The Sample Size is Sufficiently Large ###
 
+<p align="center">
+  <img src="Images/SampleCheck.png" alt="Flowchart" width="400">
+</p>
+
+| Symbol       | Meaning                                                                                  |
+|--------------|------------------------------------------------------------------------------------------|
+| N_sample     | Total sample size required for the logistic regression model                             |
+| k            | Number of explanatory variables (independent features) in the model                     |
+| p_min        | Probability (or proportion) of the least frequent outcome of the target variable        |
+| 10           | Rule of thumb: at least 10 “events” per variable to ensure stable coefficient estimates |
+
+The required sample size is **2,403.86**, while the actual number of observations in my dataset is **6,851**. This indicates that the dataset has a sufficient sample size to meet Assumption 6.
+
+**=> Assumption 6 is satisfied**
 
 
