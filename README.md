@@ -53,3 +53,11 @@
 **Model refinement:** When any assumption is violated, appropriate tests or feature engineering techniques are applied.
 
 **Interpretation of coefficients:** Model coefficients and p-values are interpretable once all assumptions are satisfied.
+
+## 3/ Assumption Check ##
+### Assumption 1: The response variable is binary ###
+<p align="center">
+  <img src="Images/Target.png" alt="Flowchart" width="200">
+</p>
+
+The Target feature **Revenue** is a binary feature with 2 values: **Yes** and **No**, where **Yes** means the session resulted in a purchase and **No** means the session has no purchase. **=> Assumption 1 is satisfied**
