@@ -30,3 +30,26 @@
 | Weekend | Categorical | Weekday vs Weekend visit |
 
 ## 2/ Project Workflow ##
+<p align="center">
+  <img src="Images/Flowchart.png" alt="Flowchart" width="600">
+</p>
+
+**Train a Logistic Regression Model:** Fit the data with a logistic regression model.
+
+**Assumption check:** Check whether the model satisfies the six assumptions of logistic regression:
+
+**1.** The response variable is binary.
+
+**2.** The observations are independent.
+
+**3.** There is no multicollinearity among explanatory variables.
+
+**4.** There are no extreme outliers.
+
+**5.** There is a linear relationship between the explanatory variables and the logit of the response variable.
+
+**6.** The sample size is sufficiently large.
+
+**Model refinement:** When any assumption is violated, appropriate tests or feature engineering techniques are applied.
+
+**Interpretation of coefficients:** Model coefficients and p-values are interpretable once all assumptions are satisfied.
