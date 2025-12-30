@@ -263,7 +263,7 @@ The model summary is shown below:
   <img src="Images/ModelSummary.png" alt="Flowchart" width="700">
 </p>
 
-Ignoring β₀ (the intercept), I focused only on features with p-values (P>/z/) less than 0.05, which indicates that their associations with purchase intention are statistically significant.
+I focused only on features with p-values (P>/z/) less than 0.05, which indicates that their associations with purchase intention are statistically significant.
 
 There are 3 features with p-values less than 0.05: **ProductRelated_Duration, Month, VisitorType_Returning_Visitor**
 
@@ -284,4 +284,15 @@ The coefficient shows how much the log-odds change when x increases by one unit.
 
 **. Month:** A one-unit increase in month (i.e., moving one month closer to the end of the year) is associated with a 0.47% increase in purchase probability, holding other variables constant **=> Customers tend to have higher purchase intention toward the end of the year.**
 
-**. VisitorType_Returning_Visitor:** 
+**. VisitorType_Returning_Visitor:** The AME of VisitorType_Returning_Visitor is −0.0356, indicating that being a returning visitor is associated with an average decrease of 3.56 percentage points in the probability of purchase intention, compared to a new visitor, holding other variables constant. **=> This variable shows the strongest association with purchase intention. Returning visitors tend to have a lower probability of making a purchase than other types of customers.**
+
+## 5/ Conclusion ##
+Correlation does not equal causation, so the company should not make major operational or marketing decisions based only on these results. Nevertheless, the analysis highlights hypotheses worth investigating further to tackle key business challenges.
+
+### Why are returning visitors less likely to make a purchase? ###
+
+**The website lacks a user-friendly interface:** An unfriendly UI/UX can make customers feel less engaged with the products, which may reduce the likelihood of purchase each time they return.
+
+**Returning visitors may simply be the result of repeated ad exposures:** Customers may view products multiple times due to ads run in collaboration with game platforms and YouTube. This can cause them to be classified as returning visitors, even without any real purchase intention.
+
+**Returning visitors may have already purchased the product:** Customers may have already purchased the product and return with the purpose of recommending it to their family or friends. This is the most positive hypothesis.
