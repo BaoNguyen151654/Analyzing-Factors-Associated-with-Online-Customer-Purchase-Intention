@@ -60,7 +60,7 @@
   <img src="Images/Target.png" alt="Flowchart" width="200">
 </p>
 
-The Target feature **Revenue** is a binary feature with 2 values: **Yes** and **No**, where **Yes** means the session resulted in a purchase and **No** means the session has no purchase. **=> Assumption 1 is satisfied**
+The Target feature **Revenue** is a binary feature with 2 values: **1** and **0**, where **1** means the session resulted in a purchase and **0** means the session has no purchase. **=> Assumption 1 is satisfied**
 
 ### Assumption 2: The observations are independent ###
 
@@ -254,4 +254,34 @@ The required sample size is **2,403.86**, while the actual number of observation
 
 **=> Assumption 6 is satisfied**
 
+## 4/ Interpretation of coefficients ##
 
+While the logistic regression model satisfies all assumptions, its coefficients can be meaningfully interpreted.
+The model summary is shown below:
+
+<p align="center">
+  <img src="Images/ModelSummary.png" alt="Flowchart" width="700">
+</p>
+
+Ignoring β₀ (the intercept), I focused only on features with p-values (P>/z/) less than 0.05, which indicates that their associations with purchase intention are statistically significant.
+
+There are 3 features with p-values less than 0.05: **ProductRelated_Duration, Month, VisitorType_Returning_Visitor**
+
+The coefficient shows how much the log-odds change when x increases by one unit. However, the concept of log-odds is often difficult for stakeholders to understand. Therefore, I calculated the Average Marginal Effect (AME), which measures the change in the probability of the outcome.
+
+<p align="center">
+  <img src="Images/AME.png" alt="Flowchart" width="500">
+</p>
+
+| Symbol       | Meaning                                                                                  |
+|--------------|------------------------------------------------------------------------------------------|
+| AME          | Average Marginal Effect                             |
+| N            | Number of observations                                                                   |
+| p_i          | Predicted probability for observation i                                                  |
+| β_j           | Logistic regression coefficient for x_j                                                 |
+
+**. ProductRelated_Duration:** The AME of ProductRelated_Duration is 1.8e-05, indicating that a one-unit increase in this variable is associated with an average increase of 0.0018% in the probability of purchase intention, holding other variables constant. **=> The longer a customer spends viewing related products (ProductRelated_Duration), the higher the probability of making a purchase. However, the effect is very small.**
+
+**. Month:** A one-unit increase in month (i.e., moving one month closer to the end of the year) is associated with a 0.47% increase in purchase probability, holding other variables constant **=> Customers tend to have higher purchase intention toward the end of the year.**
+
+**. VisitorType_Returning_Visitor:** 
