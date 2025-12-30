@@ -1,5 +1,5 @@
 # Regression Analysis: Analyzing Factors Associated with Online Customer Purchase Intention
----
+--------------------------------
 
 ## 1/ Project Overview ##
 **Goal:** In this project, I analyze the factors associated with online customer purchase intention. Understanding these factors helps businesses make effective marketing decisions and focus their efforts on customers who are more likely to make a purchase.
@@ -289,10 +289,17 @@ The coefficient shows how much the log-odds change when x increases by one unit.
 ## 5/ Conclusion ##
 Correlation does not equal causation, so the company should not make major operational or marketing decisions based only on these results. Nevertheless, the analysis highlights hypotheses worth investigating further to tackle key business challenges.
 
-### Why are returning visitors less likely to make a purchase? ###
+### Q1: Why are returning visitors less likely to make a purchase? ###
 
-**The website lacks a user-friendly interface:** An unfriendly UI/UX can make customers feel less engaged with the products, which may reduce the likelihood of purchase each time they return.
+**- The website lacks a user-friendly interface:** An unfriendly UI/UX can make customers feel less engaged with the products, which may reduce the likelihood of purchase each time they return.
 
-**Returning visitors may simply be the result of repeated ad exposures:** Customers may view products multiple times due to ads run in collaboration with game platforms and YouTube. This can cause them to be classified as returning visitors, even without any real purchase intention.
+**- Returning visitors may simply be the result of repeated ad exposures:** Customers may view products multiple times due to ads run in collaboration with game platforms and YouTube. This can cause them to be classified as returning visitors, even without any real purchase intention.
 
-**Returning visitors may have already purchased the product:** Customers may have already purchased the product and return with the purpose of recommending it to their family or friends. This is the most positive hypothesis.
+**- Returning visitors may have already purchased the product:** Customers may have already purchased the product and return with the purpose of recommending it to their family or friends. This is the most positive hypothesis.
+
+### Q2: Why are customers more likely to make purchases toward the end of the year? ###
+
+At the end of the year, many customers replace old products with new ones, particularly trendy items like fashion. The company can leverage the end-of-year period to launch promotional campaigns for old products while ramping up the procurement of new items. 
+
+### Q3: What can we gain from the relationship between purchase intention and time spent on related products? ###
+The effect of this variable on purchase intention is minimal, so advanced methods like causal inference may be needed to guide strategy.
