@@ -291,11 +291,13 @@ Correlation does not equal causation, so the company should not make major opera
 
 ### Q1: Why are returning visitors less likely to make a purchase? ###
 
+**- The customer is undecided:** While they appear interested in the product, they are concerned about the price or the seller's credibility. 
+
 **- The website lacks a user-friendly interface:** An unfriendly UI/UX can make customers feel less engaged with the products, which may reduce the likelihood of purchase each time they return.
 
 **- Returning visitors may simply be the result of repeated ad exposures:** Customers may view products multiple times due to ads run in collaboration with game platforms and YouTube. This can cause them to be classified as returning visitors, even without any real purchase intention.
 
-**- Returning visitors may have already purchased the product:** Customers may have already purchased the product and return with the purpose of recommending it to their family or friends. This is the most positive hypothesis.
+**=> For return visitors, a small pop-up can be displayed showing the product they viewed previously, emphasizing the limited stock remaining to create a sense of scarcity.**
 
 ### Q2: Why are customers more likely to make purchases toward the end of the year? ###
 
